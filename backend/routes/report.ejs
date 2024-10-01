@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <style>
+            table{
+                font-family: Arial,sans-serif;
+                border-collapse: collapse;
+                width: 100%;
+            }
+            td,th{
+                border: 1px,solid #ddd;
+                text-align:left ;
+                padding: 8px;
+            }
+        </style> 
+    </head>
+    <body>
+        <h3 style="text-align: center;">listes des admis et attentes</h3>
+        <table>
+            <tr>
+                <th>nom et prenom: </th>
+                <th>Master: </th>
+                <th>score: </th>
+                <th>action: </th>
+            </tr>
+            <% if(result.length > 0) { %>
+                <% result.forEach(result =>{ %>
+                    <tr> <td><%= userFullname%></td>
+                        <td><%= TitreMaster%></td>
+                        <td><%= noteScore%></td>
+                        <td><%= action%></td>
+                    </tr>
+                    <%});%>
+                   
+                
+            
+        </table>
+    </body>
+</html>
